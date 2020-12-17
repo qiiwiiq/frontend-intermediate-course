@@ -1,0 +1,80 @@
+$black: #000;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.view {
+  min-width: 1000px;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba($black, .5), rgba($black, .5)),
+    url("http://cdn.leagueoflegends.com/lolkit/1.1.6/resources/images/bg-default.jpg");
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.container {
+  width: 930px;
+  min-width: 930px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 40px 0 30px 0;
+  height: fit-content;
+
+  .card {
+    width: 300px;
+    min-width: 300px;
+    margin-bottom: 15px;
+    border: 1px solid rgba($black, .5);
+    cursor: pointer;
+    transition: filter 0.5s, box-shadow 0.5s;
+
+    &:hover {
+      filter: brightness(150%);
+      box-shadow: 3px 3px 10px 2px rgba($black, 0.5);
+    }
+
+    .game-view {
+      height: 165px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .info {
+      display: flex;
+      color: #BEB6A7;
+      background-color: rgba($black, .55);
+      padding: 8px 12px;
+      font-size: 14px;
+    
+      .host {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 8px;
+      }
+    
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    
+      .name {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+
+
